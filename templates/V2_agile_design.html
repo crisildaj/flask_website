@@ -52,17 +52,7 @@
     text-align: center;
     font-size: larger;
 }
-a:link {
-    color: white;
-    text-decoration: none;
-}
-a:visited {
-    color: white;
-    text-decoration: none;
-}
-.nav:hover{
-    color: black;
-}
+
 /*main header Agile DSDM,Scrum,Design Thinking Aligned center*/
 .header-title {
     text-align: center;
@@ -117,7 +107,7 @@ color: black;
 #pageBackgrounds{
     padding:0;
     margin: 0;
-} */
+} 
 
 .containers{
     display:flex;
@@ -173,7 +163,7 @@ color: black;
     border-radius: 50px;
     margin: -30px 40px 10px 40px;
     padding-top: -100px; 
-    
+    font-size: 15pt;
     border: #0072c9;
     border-style: solid;
     border-width: 10px;
@@ -343,8 +333,8 @@ ul {
 /*Styling for each Image*/
 .DSDM_Image1 {
     position: absolute;
-    top: 200px;
-    right: 10px;
+    top: 250px;
+    right: 500px;
     cursor: zoom-in;
 }
 .DSDM_Image1:hover{
@@ -353,8 +343,8 @@ ul {
 }
 .DSDM_Image2 {
     position: absolute;
-    top: 600px;
-    right: 20px;
+    top: 250px;
+    right: 100px;
     cursor: zoom-in;
 }
 .DSDM_Image2:hover{
@@ -363,8 +353,8 @@ ul {
 }
 .DSDM_Image3 {
     position: absolute;
-    top: 900px;
-    right: 10px;
+    top: 680px;
+    right: 250px;
     cursor: zoom-in;
 }
 .DSDM_Image3:hover{
@@ -373,8 +363,8 @@ ul {
 }
 .Scrum_Image1 {
     position: absolute;
-    top: 1400px;
-    right: 10px;
+    top: 1250px;
+    right: 500px;
     cursor: zoom-in;
 }
 .Scrum_Image1:hover{
@@ -383,8 +373,8 @@ ul {
 }
 .Scrum_Image2 {
     position: absolute;
-    top: 1675px;
-    right:30px;
+    top: 1250px;
+    right:80px;
     cursor: zoom-in;
 }
 .Scrum_Image2:hover{
@@ -393,8 +383,8 @@ ul {
 }
 .Scrum_Image3 {
     position: absolute;
-    top: 1975px;
-    right: 20px;
+    top: 1650px;
+    right: 500px;
     cursor: zoom-in;
 }
 .Scrum_Image3:hover{
@@ -403,8 +393,8 @@ ul {
 }
 .Scrum_Image4 {
     position: absolute;
-    top: 2240px;
-    right:70px;
+    top: 1650px;
+    right:100px;
     cursor: zoom-in;
 }
 .Scrum_Image4:hover{
@@ -412,10 +402,10 @@ ul {
     transition: 0.5s ease-in-out;
 }
 
-.Design_Image1 {
+.Design_Image1{
     position: absolute;
-    top: 2600px;
-    right: 10px;
+    top: 2400px;
+    right: 500px;
     cursor: zoom-in; 
 }
 .Design_Image1:hover{
@@ -425,8 +415,8 @@ ul {
 
 .Design_Image2 {
     position: absolute;
-    top: 2900px;
-    right: 10px;
+    top: 2400px;
+    right: 100px;
     cursor: zoom-in;
 }
 .Design_Image2:hover{
@@ -435,8 +425,8 @@ ul {
 }
 .Design_Image3 {
     position: absolute;
-    top: 3200px;
-    right: 10px;
+    top: 2800px;
+    right: 500px;
     cursor: zoom-in;
 }
 .Design_Image3:hover{
@@ -445,8 +435,8 @@ ul {
 }
 .Design_Image4 {
     position: absolute;
-    top: 3500px;
-    right: 10px;
+    top: 2800px;
+    right: 100px;
     cursor: zoom-in;
 }
 .Design_Image4:hover{
@@ -509,13 +499,11 @@ li {
 
         <!-- nav bar -->
         <div id="pages">
-<!-- Inside your header section -->
-        <ul id="pageList">
-            <li class="otherPages"><a class="nav" href="aboutUs.html">About Us</a></li>
-            <li class="otherPages"><a class="nav" href="resources_page.html">Resources</a></li>
-            <li class="otherPages"><a class= "nav" href="legal_page.html">Legal & Privacy</a></li>
-        </ul>
-
+            <ul id="pageList">
+                <li class="otherPages" id="aboutUs"><a class="nav" href="aboutUs.html">About Us</a></li>
+                <li class="otherPages"  id="resources"><a class="nav" href="resources_page.html">Resources</a></li>
+                <li class="otherPages" id="legalprivacy"><a class="nav" href="legal_page.html">Legal & Privacy</a></li>
+            </ul>
         </div>
     </header>
     <br>
@@ -524,8 +512,7 @@ li {
         <div style="width: 50%" class="textbox1" >
             <h3 style="text-align: center;" class="bullets">Agile DSDM</h3>
                 <ul>
-                    <em>DSDM is an Agile method that focuses on the full project lifecycle. DSDM philosphy is 'best business value emerges when projects are aligned to clear business goals, deliver frequently and invlove the collaboration of motivated people'.   </em>
-                    <p>DSDM Philosphy is supported by principles, processes, people and practices.</p>
+                    <em> Agile DSDM is an iterative and incremental approach to managing projects. It emphasizes collaboration, flexibility, and delivering value to customers.   </em>
                     <h4>Principles of DSDM</h4>
                     <li>Focus on business need, Deliver on time, Collaborate, Never Compromise Quality, Build incrementally, Develop Iterativley, Communicate Continuously & Demonstrate control </li>
                     <h4>DSDM Roles</h4>
@@ -605,7 +592,7 @@ li {
         </div>
         <br>
         <div class="Scrum_Image3">
-            <img src="static/images/Scrum_Pillars.jpeg alt = "Scrum Pillars" class="Scrum Pillars" style="height: 170px; width:auto;">
+            <img src="static/images/Scrum_Pillars.jpeg" alt = "Scrum Pillars" class="Scrum Pillars" style="height: 170px; width:auto;">
             <br>
             <div class="img-caption_ScrumPillars">
                 <p style="margin-left: 5px; margin-right: 5px;">Image: Scrum Pillars.</p>
@@ -671,7 +658,7 @@ li {
         
         <br>
         <div class="Design_Image3">
-            <img src="static/images/Double_Diamond.jpeg alt = "Double Diamond" class="Double_Diamond" style="height: 180px; width:auto;">
+            <img src="static/images/Double_Diamond.jpeg" alt = "Double Diamond" class="Double_Diamond" style="height: 180px; width:auto;">
             <br>
             <div class="img-caption_DoubleDiamond">
                 <p style="margin-left: 5px; margin-right: 5px;">Image: Double Diamond Model.</p>

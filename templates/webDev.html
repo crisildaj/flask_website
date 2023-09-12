@@ -50,6 +50,29 @@
     top: 10px; 
     right: 10px; 
 }
+
+ul#pageList {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+    ul#pageList li:nth-child(4){
+        margin-right:50px;
+        margin-bottom: -700px;
+    }
+
+    ul#pageList li.otherPages {
+    display: inline;
+    margin: 10px;
+    cursor: pointer;
+
+    }
+
+    ul#pageList li.otherPages:hover {
+    background-color: white;
+    color: black;
+}
 .otherPages{
     display:inline;
     margin: 10px; 
@@ -62,7 +85,7 @@
     display:flex;
     justify-content:space-around;
 }
-#aboutUs,#resources,#legalPrivacy{
+#aboutUs,#resources,#legalprivacy{
     transition:0.5s;
 }
 #aboutUs:hover{
@@ -77,7 +100,7 @@
     border-radius: 6px; 
     padding:5px
 }
-#legalPrivacy:hover{
+#legalprivacy:hover{
     background-color: white;
     color: black;
     border-radius: 6px; 
@@ -123,27 +146,42 @@ h1,p{
     color: black;
     justify-content: center;
     border-radius: 50px;
-    margin: 20px 40px 10px 40px;
-    width: 695px;
+    margin: 20px 150px 10px 40px;
+    width: 800px;
     padding-top: -100px; 
     border: #0072c9;
     border-style: solid;
     border-width: 10px;
+    font-size: 15pt;
 }
 
 .images{
     display: flex;
     flex-direction: column;
-    margin-right: -50px;
+    margin-left: 0;
+    width:800px;
+    text-align: center;
     
 }
 
 .img{
-    margin: 30px;
+    margin: 10px;
     border-radius: 30px;
     padding: 20px;
     background-color: white;
+    align-items: center;
 }
+
+.imgText{
+    color: black;
+    background-color: white;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 10px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
 
 #topHalf{
     display: flex;
@@ -178,8 +216,8 @@ h1,p{
     
     <h1>Web Development</h1>
 
-    <p>Web Development is all about websites and applications that are accessed through the internet and can run on a browser</p>
-    <p>All the websites and apps that are accessed through browsers such as Chrome are built by the technologies stated within this page.</p>
+    <p style="font-size: 20pt;">Web Development is all about websites and applications that are accessed through the internet and can run on a browser</p>
+    <p style="font-size: 20pt;">All the websites and apps that are accessed through browsers such as Chrome are built by the technologies stated within this page.</p>
 
     <div id="topHalf">
         <div id="firstInfo">
@@ -209,20 +247,31 @@ h1,p{
                 <li>Loops are blocks that can repeat a portion of code a specified amount of times, and these are expressed in the form of a "for" or a "while" statement</li>
                 <li>Functions are a useful part of JS Programming that allows for a block of code to be repeated when a defined function has been called within the program</li>
             </ul>
-            <h3 class="infoHeadings">Descriptions for each of the images are shown below</h3>
+            <!-- <h3 class="infoHeadings">Descriptions for each of the images are shown below</h3>
             <p> The number for each description corresponds with the image number going from the top to the bottom.</p>
             <ol>
                 <li>This shows the general format of a HTML element, where there is an opening tag, a closing tag, and then the content for the tag.</li>
                 <li>The format for applying CSS is as shown, where the selector wraps the different properties that will style the element</li>
                 <li>A function is a key part of javascript programming which allows for a block of code to be executed at different parts of a program.</li>
-            </ol>
+            </ol> -->
         </div>
 
         <div class="images">
-            <img class="img" src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/html_element.png" alt="">  
+            <img class="img" src="https://cdo-curriculum.s3.amazonaws.com/media/uploads/html_element.png" alt=""> 
+            <div class="imgText">
+                <h2>This is the General Format for a CSS Selector, where a opening and closing tag encase the content of the element.</h2>
+            </div>
             <img class="img" src="https://web-dev.imgix.net/image/VbAJIREinuYvovrBzzvEyZOpw5w1/hFR4OOwyH5zWc5XUIcyu.svg" alt="">  
+            <div class="imgText">
+                <h2>The format for applying CSS is as shown, where the selector wraps the different properties that will style the element.</h2>
+            </div>
             <img class="img" id="jsFunction" src="https://www.programiz.com/sites/tutorial2program/files/javascript-return-statement.png" alt="" background-color:white>   
+            <div class="imgText">
+                <h2>A function is a key part of javascript programming which allows for a block of code to be executed at different parts of a program.</h2>
+            </div>
         </div>
+    </div>
+
     </div>
 
     <div class="Page_Footer" id= "Page_Footer">
