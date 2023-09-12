@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure by Design</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lato&family=Mukta:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<!-- need to add header and footer -->
+<!-- move image closer to textbox -->
+    <style>
+
+    body{
+        background-image: url(  "{{ url_for('static', filename='images/sky_background2.jpeg') }}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family:'Lato', sans-serif;
+        color:white;  
+        font-family: 'Josefin Sans', sans-serif;
+        font-family: 'Lato', sans-serif;
+        font-family: 'Mukta', sans-serif;
+    }
+
+    /* header {
+        display:inline-block;
+        background-image: url("sky_background2.jpeg");
+        padding: 0px;
+        
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    } */
+
+    /* header {
+    display:inline-block;
+    background-image: url("sky_background2.jpeg");
+    padding: 0px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    } */
+
+    /* .logo {
+        margin-left: 10px;
+    }  */
+
+    .Technophobes{
+        color: white;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 30px;
+        margin-right: 1300px;
+        border-radius: 20px;
+        padding: 2px 7px 2px 7px;
+        background-color: #0072c9;
+        opacity: 10;
+        text-align: center;
+        font-size: larger;
+    }
+
+    .header_flexbox {
+        display: flex;
+    
+    }
+    
+
+        /* nav bar styling */
+        /* About Us, Help, Legal and Privacy Nav Bar */
+    #pages{
+        position: absolute;
+        top: 10px; /* Adjust the top spacing as needed */
+        right: 10px; /* Adjust the right spacing as needed */
+    }
+
+    ul#pageList {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+}
+
+    ul#pageList li:nth-child(4){
+        margin-right:50px;
+        margin-bottom: -700px;
+    }
+
+    ul#pageList li.otherPages {
+    display: inline;
+    margin: 10px;
+    cursor: pointer;
+
+    }
+
+    ul#pageList li.otherPages:hover {
+    background-color: white;
+    color: black;
+}
+
+
+    .otherPages{
+        display:inline;
+        margin: 10px; 
+    }
+    #pageBackgrounds{
+        padding:0;
+        margin: 0;
+    } */
+
+    .containers{
+        display:flex;
+        justify-content:space-around;
+    }
+    #aboutUs,#resources, #legalprivacy{
+        transition:0.5s;
+    }
+    #aboutUs:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    }
+    #resources:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    }
+    #legalprivacy:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    }
+    /* #legal:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    } */
+    
+    a:link{
+        color: white;
+        text-decoration: none;
+    }
+
+    a:visited{
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav:hover{
+    color:black;
+}
+    
+    h1{
+        font-size: 50px;
+    }
+
+    h1,p{
+        display: block;
+        text-align: center;
+        margin-top: -0px;
+    }
+
+    /* styling for white textbox */
+    .textbox1 {
+        background-color: white;
+        color: black;
+        justify-content: center;
+        border-radius: 50px;
+        margin: -10px 40px 10px 40px;
+        padding-top: -100px; 
+        
+        border: #0072c9;
+        border-style: solid;
+        border-width: 10px;
+    }
+
+    .img-caption {
+        width: 30vw;
+        background-color: white;
+        color: black;
+        justify-content: center;
+        /* margin: 300px 10px 10px 1150px; */
+        overflow: hidden;
+        border: #0072c9;
+        border-style: solid;
+        border-width: 7px;
+        border-radius: 20px;
+    }
+
+    ul {
+        margin-right: 70px;
+        margin-left: 10px; 
+    }
+
+    /* styling for title: 'Python Programming & Flask' */
+    h1 {
+        font-size: 30pt;
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    /* styling for intro */
+    .intro_text {
+        margin: 0px 40px 40px 40px;
+        font-size: 20pt;
+    }
+    
+    /* styling for images div */
+    .images {
+        margin-left: 50vw;
+        margin-top: -90vw;
+        
+        /* border-radius: 20px;
+        border-style: solid;
+        border-color: #0072c9; */
+        overflow: hidden;
+       
+        width: 30vw;
+        padding: 100px;
+
+    }
+
+    /* styling for actual image */
+    /* I've decided to only include one image cause I don't think python will need loads of images */
+    /* .screenshots {
+        height: 500px;
+        width: 500px;
+        margin-top: -150px;
+        margin-left: 200px;
+    } */
+
+    .Page_Footer {
+    background-color: #071b42;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 22vw;
+    /* position: fixed; */
+    bottom: 0;
+    align-items: baseline;
+    /* margin-bottom: -60px; */
+    }
+
+
+
+
+    /* html, body {
+        /* hides scrollbar and prevents scrolling for the whole webpage */
+        /* margin: 0; 
+        height: 100%; 
+        overflow: hidden
+    }    */ 
+
+   
+</style>
+
+<body>
+    <header>
+        <div class="header_flexbox">
+            <!-- picture of sky logo -->
+            <a href="/index.html"><img src="static/images/transparent logo.webp" alt="sky logo" width="200px" height="100px" class="logo"></a>
+
+            <div class="Technophobes">
+                <h3>Technophobes</h3>
+            </div>
+        </div>
+
+        
+
+        <!-- nav bar -->
+        <div id="pages">
+            <ul id="pageList">
+                <li class="otherPages" id="aboutUs"><a class="nav" href="aboutUs.html">About Us</a></li>
+                <li class="otherPages"  id="resources"><a class="nav" href="resources_page.html">Resources</a></li>
+                <li class="otherPages" id="legalprivacy"><a class="nav" href="legal_page.html">Legal & Privacy</a></li>
+            </ul>
+        </div>
+
+
+    </header>
+
+    <!-- Title and intro -->
+    <div style="margin-bottom: 4vw;">
+        <h1 style="margin-top: 2vw;">Secure by Design</h1>
+        <p class="intro_text">Python is an object oriented programming language. Flask is a Python web framework that allows you to create web applications. It makes the creation of websites scalable. </p>
+
+<div classa="together">
+    <div class="main_flexbox">
+        <!-- Application of knowledge -->
+        <div style="width: 50%" class="textbox1" >
+            <h3 style="text-align: center; font-size: 20pt;" class="bullets">Learning and Application of Knowledge</h3>
+                <ul style="font-size: 15pt;">
+                    <li> Assigning data to variables and using methods - use dir(object) to identify the variables that can be used</li>
+                    <br>
+                    <li> Using for loops, while loops and conditional if statements </li>
+                    <br>
+                    <li> String handling: slicing, splitting, stripping, etc. </li>
+                    <br>
+                    <li> Python collection tyes: tuples, lists, sets and dictionaries </li>
+                    <br>
+                    <li> Data storage and file handling
+                        <br>
+                        - opening files and extracting specific information from them
+                        <br>
+                        - lopping through a file to get a list of lines or words
+                     </li>
+                    <br>
+                    <li> Regular expressions are used to match or search for characters in a string (need to import the re module)
+                    </li>
+                    <br> 
+                    <li> Functions allows you to group a block of code with repititive tasks together</li>
+                    <br>  
+                    <li> Classes are used to group functionality together 
+                        <br>
+                        - usually a group of functions
+                        <br>
+                        - the __init__() function is used to initialise the function
+                        <br>
+                        <img src="static/images/class.png" style="margin-left: 5vw;">
+                    </li>
+
+                    <br>
+                    <li> The Flask framework
+                        <br>
+                        - allows you to create HTML templates to structure your webpage 
+                        <br>
+                        - makes use of HTTP methods like GET and POST; 
+                        <br>
+                        - GET is used to return data from the server (the default method)  
+                        <br>
+                        - POST is used to handle form data
+                        <br>
+                        - planning to incorporate it properly in the next sprint if we had more time
+                        <br>
+                        <img src="static/images/flask_diagram.jpeg">
+                    </li>
+
+                    <br>  
+                    
+                </ul>
+        </div>
+
+    
+        <!-- image -->
+        <div class="images">
+            <img src="static/images/dir(object).png" alt = "screenshot of code" class="screenshots" style="height: 400px; width: 600px; margin-top: -101px;">
+            <div class="img-caption" style="margin-bottom: 100px;">
+                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">Running dir(string) lists the methods you can use on a string</p>
+            </div>
+            
+            <!-- <img src="flask_diagram.jpeg" alt = "screenshot of code" class="screenshots" style="height: 400px; width: 750px; margin-top: 3vw;">
+            <div class="img-caption">
+                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">How the Flask framework works</p>
+            </div> -->
+            <img src="static/images/flask_screenshot.png" alt = "screenshot of code" class="screenshots" style="height: 400px; width: 750px; margin-top: 3vw;">
+            <div class="img-caption">
+                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">How the Flask framework was used in building this website</p>
+            </div>
+        </div>
+
+</div>          
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="Page_Footer" id= "Page_Footer">
+    <p style="margin-top: 20px; margin-bottom: 20px;">&copy; 2023 Technophobes. All Rights Reserved</p>
+    </div>
+
+</body>
+</html> 

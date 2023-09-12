@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agile DSDM, Scrum & Design Thinking</title>
+    <!-- <link rel="stylesheet" href="main.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lato&family=Mukta:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="V2_Agile_Design_Style.css"> 
+</head>
+
+<style>
+    body{
+        background-image: url(  "{{ url_for('static', filename='images/sky_background2.jpeg') }}");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family:'Lato', sans-serif;
+    color:white;  
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Mukta', sans-serif;
+}
+
+.header {
+    display:inline-block;
+    background-image: url("/images/sky_background2.jpeg");
+    padding: 0px;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    }
+
+.logo {
+    margin-left: 10px;
+}  
+/*Technophobes logo*/
+.Technophobes{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 10px;
+    border-radius: 20px;
+    padding: 2px 5px;
+    background-color: #0072c9;
+    opacity: 1;
+    text-align: center;
+    font-size:xx-small;
+}
+a:link {
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+.nav:hover{
+    color: black;
+}
+/*main header Agile DSDM,Scrum,Design Thinking Aligned center*/
+.header-title {
+    text-align: center;
+    margin-top: 10px;
+}
+/*not sure what this is doing*/
+.header h1 {
+    font-size: 300pt;
+    margin-top: 0;
+}
+/*technophobes box*/
+.header_flexbox {
+    display: flex;
+
+}
+    /* nav bar styling */
+    /* About Us, Resources, Legal and Privacy Nav Bar */
+#pages{
+    position: absolute;
+    top: 10px; /* Adjust the top spacing as needed */
+    right: 10px; /* Adjust the right spacing as needed */
+}
+
+ul#pageList {
+list-style: none; /* Remove default list styles */
+padding: 0;
+margin: 0;
+}
+
+ul#pageList li:nth-child(4){
+    margin-right:50px;
+    margin-bottom: -700px;
+}
+
+ul#pageList li.otherPages {
+display: inline;
+margin: 10px;
+cursor: pointer;
+
+}
+
+ul#pageList li.otherPages:hover {
+background-color: white;
+color: black;
+}
+
+
+.otherPages{
+    display:inline;
+    margin: 10px; 
+}
+#pageBackgrounds{
+    padding:0;
+    margin: 0;
+} */
+
+.containers{
+    display:flex;
+    justify-content:space-around;
+}
+#aboutUs,#resources, #legalprivacy{
+        transition:0.5s;
+    }
+    #aboutUs:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    }
+    #resources:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    }
+    #legalprivacy:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    }
+    /* #legal:hover{
+        background-color: white;
+        color: black;
+        border-radius: 6px; 
+        padding:5px
+    } */
+    
+    a:link{
+        color: white;
+        text-decoration: none;
+    }
+
+    a:visited{
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav:hover{
+    color:black;
+}
+
+/* styling for white textbox */
+.textbox1 {
+    background-color: white;
+    color: black;
+    justify-content: center;
+    border-radius: 50px;
+    margin: -30px 40px 10px 40px;
+    padding-top: -100px; 
+    
+    border: #0072c9;
+    border-style: solid;
+    border-width: 10px;
+}
+
+ul {
+    margin-right: 70px;
+    margin-left: 10px; 
+}
+
+/*Styling for each image caption box*/ 
+.img-caption_DSDM_Process {
+    position: absolute;
+    right: 70px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_DSDM_Scrum_Team {
+    position: absolute;
+    right: 40px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_Project_TimeLine{
+    position: absolute;
+    right: 60px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_ScrumFlow {
+    position: absolute;
+    right:90px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_ScrumValues {
+    position: absolute;
+    right: 70px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_ScrumPillars {
+    position: absolute;
+    right: 80px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_Wireframe {
+    position: absolute;
+    right: 80px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+
+.img-caption_UserPersona {
+    position: absolute;
+    right: 50px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_UserJourney {
+    position: absolute;
+    right: 40px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_DoubleDiamond {
+    position: absolute;
+    right: 30px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+.img-caption_Kanban {
+    position: absolute;
+    right: 30px;
+    width:max-content;
+    background-color: white;
+    color: black;
+    justify-content:center;
+    /* margin: 300px 10px 10px 1150px; */
+    overflow: hidden;
+    border: #0072c9;
+    border-style: solid;
+    border-width: 7px;
+    border-radius: 5px;
+}
+/*Styling for each Image*/
+.DSDM_Image1 {
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    cursor: zoom-in;
+}
+.DSDM_Image1:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.DSDM_Image2 {
+    position: absolute;
+    top: 600px;
+    right: 20px;
+    cursor: zoom-in;
+}
+.DSDM_Image2:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.DSDM_Image3 {
+    position: absolute;
+    top: 900px;
+    right: 10px;
+    cursor: zoom-in;
+}
+.DSDM_Image3:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.Scrum_Image1 {
+    position: absolute;
+    top: 1400px;
+    right: 10px;
+    cursor: zoom-in;
+}
+.Scrum_Image1:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.Scrum_Image2 {
+    position: absolute;
+    top: 1675px;
+    right:30px;
+    cursor: zoom-in;
+}
+.Scrum_Image2:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.Scrum_Image3 {
+    position: absolute;
+    top: 1975px;
+    right: 20px;
+    cursor: zoom-in;
+}
+.Scrum_Image3:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.Scrum_Image4 {
+    position: absolute;
+    top: 2240px;
+    right:70px;
+    cursor: zoom-in;
+}
+.Scrum_Image4:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+
+.Design_Image1 {
+    position: absolute;
+    top: 2600px;
+    right: 10px;
+    cursor: zoom-in; 
+}
+.Design_Image1:hover{
+    transform:scale(1.3);
+    transition: 0.5s ease-in-out;
+}
+
+.Design_Image2 {
+    position: absolute;
+    top: 2900px;
+    right: 10px;
+    cursor: zoom-in;
+}
+.Design_Image2:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.Design_Image3 {
+    position: absolute;
+    top: 3200px;
+    right: 10px;
+    cursor: zoom-in;
+}
+.Design_Image3:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+.Design_Image4 {
+    position: absolute;
+    top: 3500px;
+    right: 10px;
+    cursor: zoom-in;
+}
+.Design_Image4:hover{
+    transform:scale(1.3); 
+    transition: 0.5s ease-in-out;
+}
+
+/*styling for footer and copy right*/
+.Page_Footer {
+    background-color: #071b42;
+    text-align: center;
+    padding: 5px;
+    margin-top: 40px;
+
+}
+
+.container {
+    display: flex; /* Use flexbox to align the sections horizontally */
+    justify-content: space-between; /* Distribute space evenly between the sections */
+}
+
+.bulletpoints {
+    flex: 1; /* Allow sections to grow and fill available space evenly */
+    margin: 10px; /* Add some spacing between sections */
+}
+
+/* Style list items as needed */
+ul {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px; /* Add spacing between list items */
+}
+
+</style>
+
+<body>
+    <header>
+        <div class="header_flexbox">
+            <!-- Link to the index page for the sky logo -->
+            <a href="index.html">
+                <img src="static/images/transparent logo.webp" alt="sky logo" width="200px" height="100px" class="logo">
+            </a>
+        
+            <!-- Link to the index page for the "Technophobes" text -->
+            
+                <div class="Technophobes">
+                    <h3>Technophobes</h3>
+                </div>
+            
+        </div>
+        
+        <div class="header-title">
+            <h1>Agile DSDM, SCRUM & Design Thinking</h1>
+        </div>
+
+        
+
+        <!-- nav bar -->
+        <div id="pages">
+<!-- Inside your header section -->
+        <ul id="pageList">
+            <li class="otherPages"><a class="nav" href="aboutUs.html">About Us</a></li>
+            <li class="otherPages"><a class="nav" href="resources_page.html">Resources</a></li>
+            <li class="otherPages"><a class= "nav" href="legal_page.html">Legal & Privacy</a></li>
+        </ul>
+
+        </div>
+    </header>
+    <br>
+    <div class="DSDM_flexbox">
+        <!-- Application of knowledge -->
+        <div style="width: 50%" class="textbox1" >
+            <h3 style="text-align: center;" class="bullets">Agile DSDM</h3>
+                <ul>
+                    <em>DSDM is an Agile method that focuses on the full project lifecycle. DSDM philosphy is 'best business value emerges when projects are aligned to clear business goals, deliver frequently and invlove the collaboration of motivated people'.   </em>
+                    <p>DSDM Philosphy is supported by principles, processes, people and practices.</p>
+                    <h4>Principles of DSDM</h4>
+                    <li>Focus on business need, Deliver on time, Collaborate, Never Compromise Quality, Build incrementally, Develop Iterativley, Communicate Continuously & Demonstrate control </li>
+                    <h4>DSDM Roles</h4>
+                    <li>Key roles for our project were Project Manager, Business Analyst, Technical Co-ordinator, Developers, Scrum Master & Product Owner. We combined DSDM and Scrum.</li>
+                    <h4>Processes</h4>
+                    <li>Pre-project, Feasibility, Foundations, Evolution Development, Deployment & Post Deployment</li>
+                    <h4>Practices</h4>
+                    <li>MoSCoW prioritization, Modelling, Prototyping,Workshops</li>
+                    <h4>How we applied Agile DSDM</h4>
+                    <p>Pre Project we created a TOR-Terms of Reference and defined the business objectives, project objectives, what is in and out of scope. We combined Feasiability and Foundations, allocated roles and generated numerous project documents, business case, RACI matrix PAQ, SAD, DAD ,MAD and a PID. We planned to horizons and created a project timeline. We also used modelling techniques such as wire frames.</p>
+                </ul>
+                </div>
+            </div>    
+        </div>
+        <!-- image -->
+        <div class="DSDM_Image1">
+            <img src="static/images/DSDM_Process.jpeg" alt = "DSDM Process" class="DSDM_Process" style="height: 250px; width:auto;">
+            <br>
+            <div class="img-caption_DSDM_Process">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: DSDM Process.</p>
+            </div>
+        </div>
+        <div class="DSDM_Image2">
+            <img src="static/images/DSDM_Scrum_Team.jpeg" alt = "DSDM_Scrum_Team" class="DSDM_Scrum_Team" style="height: 170px; width:auto;">
+            <br>
+            <div class="img-caption_DSDM_Scrum_Team">
+                <p style="margin-left: 5px; margin-right: 10px;">Image: DSDM & Scrum Combined.</p>
+            </div>
+        </div>
+        
+        <div class="DSDM_Image3">
+            <img src="static/images/Project_Timeline.jpeg" alt = "Project Timeline" class="Project Timeline" style="height: 180px; width:350px;">
+            <br>
+            <div class="img-caption_Project_TimeLine">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Project Timeline.</p>
+            </div>
+        </div>
+            
+    </div>
+    <br>
+    <br>
+    <div class="Scrum_flexbox">
+        <!-- Application of knowledge -->
+        <div style="width: 50%" class="textbox1" >
+            <h3 style="text-align: center;" class="bullets">Scrum</h3>
+                <ul>
+                    <li>'Scrum is a lightweight framework that helps people, teams and organisations generate value through adaptive solutions for complex problems.</em> </li>
+                    <br>
+                    <h4>Scrum Roles</h4>
+                    <li>Scrum's three roles are; Product Owner, Scrum Master and developer. </li>
+                    <br>
+                    <h4>Scrum Events</h4>
+                    <li>Scrum has five events, The Sprint, Sprint Planning, Daily Standup, Sprint Review and Sprint Retrospective </li>
+                    <br>
+                    <h4>Scrum Artefacts</h4>
+                    <li>Scrum has three artefacts, Product Backlog, Sprint Backlog and The Increment.</li>
+                    <br>
+                    <h4>How we applied Scrum</h4>
+                    <li>Initally we allocatd roles, one person assumed the role of product owner taking ownership of the product backlog, the remaining four members of the team rotated the scrum master role. All members of the team assumed the role of developer. We used four one week sprints, daily standups took place Monday - Friday via online video conferencing with cameras on. Sprint planning and estimation was based on hours, each developer showcased their work during sprint reviews and amended any work based on feedback. Sprint retrospectives highlighted process improvements which we put into the sprint backlog to apply during the next sprint. We developed Iteratively and delivered incrementally. </li>
+                    
+                </ul>
+        </div> 
+        <!-- image -->
+        <div class="Scrum_Image1">
+            <img src="static/images/Scrum_Flow.jpeg" alt = "Scrum Flow" class="Scrum_Flow" style="height: 160px; width:fit-content;">
+            <br>
+            <div class="img-caption_ScrumFlow">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Scrum Flow.</p>
+            </div>
+        </div>
+        <div class="Scrum_Image2">
+            <img src="static/images/Scrum_Values.jpeg" alt = "Scrum Values" class="Scrum_Values" style="height: 200px; width:fit-content;">
+            <br>
+            <div class="img-caption_ScrumValues">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Scrum Values.</p>
+            </div>
+        </div>
+        <br>
+        <div class="Scrum_Image3">
+            <img src="static/images/Scrum_Pillars.jpeg alt = "Scrum Pillars" class="Scrum Pillars" style="height: 170px; width:auto;">
+            <br>
+            <div class="img-caption_ScrumPillars">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Scrum Pillars.</p>
+            </div>
+        </div>
+        <br>
+        <div class="Scrum_Image4">
+            <img src="static/images/Kanban.jpeg" alt = "Kanban" class="Kanban" style="height: 170px; width:auto;">
+            <br>
+            <div class="img-caption_Kanban">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Kanban Board.</p>
+            </div>
+        </div>
+        <br>
+        <div class="Design_flexbox">
+            <!-- Application of knowledge -->
+            <div style="width: 50%" class="textbox1" >
+                <h3 style="text-align: center;" class="bullets">Design Thinking Process</h3>
+                    <ul>
+                        <li>Design thinking is a creative and user-centered approach to problem-solving that is often used in the context of web design and product development. It emphasizes understanding the needs and preferences of the end-users to create a more appealing, engaging and functional product.
+                        The design thinking process is made up of the problem space and the solution space and can be broken down into the following phases:</li>
+                        <br>
+                        <li>Empathize - understand the needs and perspectives of users and stakeholders.
+                        </li>
+                        <br>
+                        <li>Define - clearly understand the problem or challenges.</li>
+                        <br>
+                        <li>Ideate - generate a wide range of creative and innovative ideas.</li>
+                        <br>
+                        <li>Prototype - build low-fidelity representations of your ideas. </li>
+                        <br>
+                        <li>Test - gather feedback from stakeholders and users. </li>
+                        <br>   
+                        <li>Implement - implement the best solution. </li>
+                        <br> 
+                        <li>Iterate - continuoulsy refine the solution improving every iteration.</li>
+                        <br> 
+                        <h4>How we applied Design Thinking</h4>
+                        <li>     By following the process we were able to explore both the problem space and the solution space identifying user pain points and exploiting opportunities. To aid us in the design process we used tools such as user persona cards, user journey mapping, double diamond and scamper models.
+                        One of the key pain points identified was 'fragmented learning experience'. </li>
+                    
+                    </ul>
+            </div>
+    
+        
+            <!-- image -->
+            <div class="Design_Image1">
+                <img src="static/images/User_Persona.jpeg" alt = "User Persona Card" class="User_Persona" style="height: 180px; width:auto;">
+                <br>
+                <div class="img-caption_UserPersona">
+                    <p style="margin-left: 5px; margin-right: 5px;">Image: User Persona Card.</p>
+                </div>
+            </div>
+            <br>
+            <div class="Design_Image2">
+                <img src="static/images/User_Journey_Mapping.jpeg" alt = "User Journey Map" class="User_Journey" style="height: 160px; width:auto;">
+                
+                <br>
+                <div class="img-caption_UserJourney">
+                    <p style="margin-left: 5px; margin-right: 5px;">Image: User Journey Mapping.</p>
+                </div>
+            </div>
+        
+        <br>
+        <div class="Design_Image3">
+            <img src="static/images/Double_Diamond.jpeg alt = "Double Diamond" class="Double_Diamond" style="height: 180px; width:auto;">
+            <br>
+            <div class="img-caption_DoubleDiamond">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Double Diamond Model.</p>
+            </div>
+        </div> 
+        <div class="Design_Image4">
+            <img src="static/images/wireframe.jpeg" alt = "WireFrame" class="WireFrame" style="height: 180px; width:auto;">
+            <br>
+            <div class="img-caption_Wireframe">
+                <p style="margin-left: 5px; margin-right: 5px;">Image: Wireframe.</p>
+            </div>
+        </div>     
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="Page_Footer" id= "Page_Footer">
+    <p style="margin-top: 20px; margin-bottom: 20px;">&copy; 2023 Technophobes. All Rights Reserved</p>
+    </div>
+
+</body>
+</html> 

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutUs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&family=Lato&family=Mukta:wght@200&display=swap" rel="stylesheet">
+    <title>About Us</title>
+</head>
+<style>
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url(  "{{ url_for('static', filename='images/sky_background2.jpeg') }}");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family:'Lato', sans-serif;
+    color:white;    
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Mukta', sans-serif;
+}
+
+
+
+.Technophobes{
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 1300px;
+    border-radius: 20px;
+    padding: 2px 7px 2px 7px;
+    background-color: #0072c9;
+    opacity: 10;
+    text-align: center;
+    font-size: larger;
+}
+
+.header_flexbox {
+    display: flex;
+    
+}
+
+
+/* About Us, Help, Legal and Privacy Nav Bar */
+ul#pageList li.otherPages {
+    display: inline;
+    margin: 10px;
+    cursor: pointer;
+ }
+ul#pageList {
+    padding: 0;
+    margin: 0;
+}
+#pages{
+    position: absolute;
+    top: 10px; /* Adjust the top spacing as needed */
+    right: 10px; /* Adjust the right spacing as needed */
+}
+ul#pageList li:nth-child(4){
+    margin-right:50px;
+}
+.otherPages{
+    display:inline;
+    margin: 10px; 
+}
+#pageBackgrounds{
+    padding:0;
+    margin: 0;
+}
+.containers{
+    display:flex;
+    justify-content:space-around;
+}
+#aboutUs,#resources,#legalprivacy{
+    transition:0.5s;
+}
+#aboutUs:hover{
+    background-color: white;
+    color: black;
+    border-radius: 6px; 
+    padding:5px
+}
+#resources:hover{
+    background-color: white;
+    color: black;
+    border-radius: 6px; 
+    padding:5px
+}
+#legalprivacy:hover{
+    background-color: white;
+    color: black;
+    border-radius: 6px; 
+    padding:5px
+}
+
+a:link{
+        color: white;
+        text-decoration: none;
+    }
+
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+
+.nav:hover{
+color:black;
+}
+
+h1{
+    font-size: 50px;
+
+}
+
+h1,p{
+    display: block;
+    text-align: center;
+}
+
+/* Makes whole container of team members in to flexbox */
+.teams{ 
+    display:flex;
+    justify-content: space-around;
+}
+
+.teamMember{
+    background-color: white;
+    color: black;
+    width:250px;
+    height:350px;
+    border-radius:50px;
+    transition:0.5s;
+    padding: 20px;
+}
+
+.teamMember > h2{
+    text-align: center;
+}
+
+.teamMember:hover{
+    width:300px;
+    height:400px;
+    padding: 20px;
+}
+
+.descrip{
+    text-align: left;
+}
+
+.Page_Footer {
+    background-color: #071b42;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    margin-top: 40px; 
+}
+
+
+}  
+</style>
+<body>
+    <div class="header_flexbox">
+        <a href="/index.html"><img src="static/images/transparent logo.webp" alt="sky logo" width="200px" height="100px" class="logo"></a>
+        <div class="Technophobes">
+            <h3>Technophobes</h3>
+        </div>
+    </div>
+    <div id="pages">
+        <ul id="pageList">
+            <li class="otherPages" id="aboutUs"><a href="aboutUs.html" class="nav">About Us</a></li>
+            <li class="otherPages"  id="resources"><a href="resources_page.html" class="nav">Resources</a></li>
+            <li class="otherPages" id="legalprivacy"><a href="legal_page.html" class="nav">Legal & Privacy</a></li>
+        </ul>
+    </div>
+
+    <h1>The Technophobes</h1>
+
+    <p>The Technophobes are a diverse group of individuals from many different backgrounds. <br> Since this group has started, we have learnt many things along this bootcamp.</p>
+    <p>Here is a breakdown of each of the group members, their backgrounds and their motivations of joining the Technology Graduate Scheme at Sky.</p>
+    <br>
+    <br>
+    <div class="teams">
+        <div class="teamMember">
+            <h2>Faieq Rahman</h2>
+            <p class="descrip"><strong>Background:</strong> Electrical and Electronic Engineering<br><strong>Motivations:</strong>  To work with complex technologies and hone skills in software development</p>
+        </div>
+        <div class="teamMember">
+            <h2>David Guest</h2>
+            <p class="descrip"><strong>Background:</strong> Communications and Broadband Engineer<br><strong>Motivations:</strong> to work in Agile and Scrum environments at tactical and strategic levels.</p>
+        </div>
+        <div class="teamMember">
+            <h2>Olivia Vail</h2>
+            <p class="descrip"><strong>Background:</strong> Philosophy, Politics and Economics at University<br><strong>Motivations:</strong> To explore as much of the tech world as possible! Especially interested in gaining technical coding skills and understanding the strategic side of tech.</p>
+        </div>
+        <div class="teamMember">
+            <h2>Crisilda Jojo</h2>
+            <p class="descrip"> <strong>Background:</strong> Accounting and Finance at University, Python Internship at Sky<br><strong>Motivations:</strong> To explore technical roles including but not limited to development</p>
+        </div>
+        <div class="teamMember">
+            <h2>Sana Jamal</h2>
+            <p class="descrip"><strong>Background:</strong> Geography<br><strong>Motivations:</strong> To explore roles in cyber security and product</p>
+        </div>
+    </div>
+
+    <div class="Page_Footer" id= "Page_Footer">
+        <p style="margin-top: 20px; margin-bottom: 20px;">&copy; 2023 Technophobes. All Rights Reserved</p>
+    </div>
+
+</body>
+</html>
