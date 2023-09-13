@@ -291,7 +291,7 @@
     <!-- Title and intro -->
     <div style="margin-bottom: 4vw;">
         <h1 style="margin-top: 2vw;">Secure by Design</h1>
-        <p class="intro_text">Python is an object oriented programming language. Flask is a Python web framework that allows you to create web applications. It makes the creation of websites scalable. </p>
+        <p class="intro_text">We covered 4 areas of cyber security: secure development lifecycle, secure by design, applications security and defensive coding. </p>
 
 <div classa="together">
     <div class="main_flexbox">
@@ -299,52 +299,43 @@
         <div style="width: 50%" class="textbox1" >
             <h3 style="text-align: center; font-size: 20pt;" class="bullets">Learning and Application of Knowledge</h3>
                 <ul style="font-size: 15pt;">
-                    <li> Assigning data to variables and using methods - use dir(object) to identify the variables that can be used</li>
+                    <li> Secure Development Lifecycle
                     <br>
-                    <li> Using for loops, while loops and conditional if statements </li>
+                        - Within secure development lifecycle the focus is Continuous Development, Continuous Integration and Continuous Security.                   
+                        - Security processes can be applied to various product delivery models e.g. waterfall; lean; agile 
                     <br>
-                    <li> String handling: slicing, splitting, stripping, etc. </li>
+                        - By following the Secure Development Lifecycle, organizations can reduce the likelihood of security breaches, protect sensitive data, and build trust with their customers by demonstrating a commitment to security throughout the software development process. </li>
+                    </li>
                     <br>
-                    <li> Python collection tyes: tuples, lists, sets and dictionaries </li>
-                    <br>
-                    <li> Data storage and file handling
+                    <li> Secure by design
                         <br>
-                        - opening files and extracting specific information from them
+                        - Secure by design" means that security is an integral and fundamental part of a product or system from the very beginning of its development.
                         <br>
-                        - lopping through a file to get a list of lines or words
+                        - For example, software applications designed with very strict controls to ensure only authorised users can access sensitive data. Using Multifactor Authentication is a way to make logins more secure.
+                        <br>
+                        - The secure development process includes threat modelling, risk mitigation and security best practices.
+                        <br>
+                        <img src="static/images/securityimage.jpg">
+                    </li>
+
+                    <br> 
+                    <li> Applications Security
+                        <br>
+                        - We would, at a minimum, test our security against the OWASP top 10 most common cyber security breaches if we were to deploy our product website live. 
+                        <img src="static/images/owasp.png">
                      </li>
                     <br>
-                    <li> Regular expressions are used to match or search for characters in a string (need to import the re module)
+                    
+                      
+                    <li> Defensive Coding
+                        <br>
+                        - Defensive coding is a programming approach aimed at anticipating and mitigating potential errors or vulnerabilities in software applications. Key concepts are:
+                        <br>
+                         - Error Handling, Input Validation, Boundary Checks, Exception Handling, Code Reviews, Testing and Quality Assurance, Well-documented code, Logging and Monitering, Minimize Dependencies 
+                         <br>
+                         
+                        <img src="static/images/3d_secure_framework.png" style="margin-left: 5vw;">
                     </li>
-                    <br> 
-                    <li> Functions allows you to group a block of code with repititive tasks together</li>
-                    <br>  
-                    <li> Classes are used to group functionality together 
-                        <br>
-                        - usually a group of functions
-                        <br>
-                        - the __init__() function is used to initialise the function
-                        <br>
-                        <img src="static/images/class.png" style="margin-left: 5vw;">
-                    </li>
-
-                    <br>
-                    <li> The Flask framework
-                        <br>
-                        - allows you to create HTML templates to structure your webpage 
-                        <br>
-                        - makes use of HTTP methods like GET and POST; 
-                        <br>
-                        - GET is used to return data from the server (the default method)  
-                        <br>
-                        - POST is used to handle form data
-                        <br>
-                        - planning to incorporate it properly in the next sprint if we had more time
-                        <br>
-                        <img src="static/images/flask_diagram.jpeg">
-                    </li>
-
-                    <br>  
                     
                 </ul>
         </div>
@@ -352,18 +343,18 @@
     
         <!-- image -->
         <div class="images">
-            <img src="static/images/dir(object).png" alt = "screenshot of code" class="screenshots" style="height: 400px; width: 600px; margin-top: -101px;">
+            <img src="static/images/STRIDE_threat_model.png" alt = "stride threat model" class="screenshots" style="height: 400px; width: 600px; margin-top: -101px;">
             <div class="img-caption" style="margin-bottom: 100px;">
-                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">Running dir(string) lists the methods you can use on a string</p>
+                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">The stride threat model</p>
             </div>
             
             <!-- <img src="flask_diagram.jpeg" alt = "screenshot of code" class="screenshots" style="height: 400px; width: 750px; margin-top: 3vw;">
             <div class="img-caption">
                 <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">How the Flask framework works</p>
             </div> -->
-            <img src="static/images/flask_screenshot.png" alt = "screenshot of code" class="screenshots" style="height: 400px; width: 750px; margin-top: 3vw;">
+            <img src="static/images/CD_pipeline.png" alt = "ci cd pipeline" class="screenshots" style="height: 400px; width: 750px; margin-top: 3vw;">
             <div class="img-caption">
-                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">How the Flask framework was used in building this website</p>
+                <p style="margin-left: 0px; margin-right: 5px; font-size: 15pt;">CI CD pipeline</p>
             </div>
         </div>
 
