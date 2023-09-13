@@ -40,6 +40,10 @@ def about():
 def sec():
     return render_template('secure_design.html', title='Secure')
 
+@app.route('/final.html', methods=['GET'])
+def final():
+    return render_template('final.html', title='final')
+
 if __name__ == "__main__":
     # Execute only if ran directly as a program
     # Ignore if imported as a module.
